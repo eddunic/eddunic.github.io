@@ -570,7 +570,7 @@ function download(text, filename) {
 // If the XML tab was open, save and render the content.
 function exportFile() {
     var filename = new String("codigofonte");
-    var xml, php, js, lua, dart, py, java;
+    var xml, php, js, dart, py, java;
     if (document.getElementById('tab_xml').className == 'tabon') {
         xml = document.getElementById('content_xml').value;
         filename += ".xml";
@@ -587,10 +587,6 @@ function exportFile() {
         py = document.getElementById('content_python').innerText;
         filename += ".py";
         download(py, filename);
-    } else if (document.getElementById('tab_lua').className == 'tabon') {
-        lua = document.getElementById('content_lua').innerText;
-        filename += ".lua";
-        download(lua, filename);
     } else if (document.getElementById('tab_dart').className == 'tabon') {
         dart = document.getElementById('content_dart').innerText;
         filename += ".dart";
